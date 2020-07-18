@@ -6,6 +6,7 @@ import com.angel.daily_heros.MainActivityModule
 import com.angel.daily_heros.ui.main.MainTabModule
 import com.angel.daily_heros.ui.main.history.HistoryModule
 import com.angel.daily_heros.ui.main.message.MessageModule
+import com.angel.daily_heros.ui.main.qr.camera.QRScannerModule
 import com.angel.daily_heros.ui.main.qr.check.CheckListModule
 import com.angel.daily_heros.ui.main.qr.history.VisitHistoryModule
 import dagger.Module
@@ -34,7 +35,8 @@ abstract class ActivityBindingModule {
             HistoryModule::class,
             MessageModule::class,
             CheckListModule::class,
-            VisitHistoryModule::class
+            VisitHistoryModule::class,
+            QRScannerModule::class
 
 
         ]

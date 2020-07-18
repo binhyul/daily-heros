@@ -9,6 +9,14 @@
             name="model"
             type="com.angel.daily_heros.ui.main.history.HistoryModel" />
 
+        <variable
+            name="actionListener"
+            type="com.angel.daily_heros.ui.main.history.HistoryActionListener" />
+
+        <variable
+            name="position"
+            type="Integer" />
+
 
     </data>
 
@@ -16,6 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/main_background"
+        android:onClick="@{() -> actionListener.onClickHistory(position)}"
         android:paddingHorizontal="20dp">
 
 
@@ -51,10 +60,9 @@
                 <TextView
                     style="@style/TextNotoReg16"
                     android:layout_gravity="start"
-                    android:text="@{model.name}"
+                    android:text="점주"
                     android:textColor="#de000000"
-                    app:lineHeight="24dp"
-                    tools:text="김명순" />
+                    app:lineHeight="24dp" />
 
                 <TextView
                     style="@style/TextNotoReg14"
@@ -62,10 +70,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
                     android:layout_marginTop="2dp"
-                    android:text="@{model.visitTime}"
+                    android:text="@{model.name}"
                     android:textColor="#99000000"
-                    app:lineHeight="20dp"
-                    tools:text="0시간 전 방문" />
+                    app:lineHeight="20dp" />
             </LinearLayout>
 
 

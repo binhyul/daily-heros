@@ -21,7 +21,7 @@ class VisitHistoryViewModel @Inject constructor() : ViewModel(), VisitorPageActi
                     ),
                     VisitorModel(
                         "BVB",
-                        36.5f,
+                        38.5f,
                         "5분전"
                     ), VisitorModel(
                         "BBB",
@@ -45,7 +45,7 @@ class VisitHistoryViewModel @Inject constructor() : ViewModel(), VisitorPageActi
                         "5분전"
                     ), VisitorModel(
                         "QQQ",
-                        36.5f,
+                        38.0f,
                         "5분전"
                     ), VisitorModel(
                         "DDD",
@@ -74,7 +74,7 @@ class VisitHistoryViewModel @Inject constructor() : ViewModel(), VisitorPageActi
                     ),
                     VisitorModel(
                         "EFDS",
-                        36.5f,
+                        37.9f,
                         "20분 전"
                     ), VisitorModel(
                         "FFFF",
@@ -122,5 +122,6 @@ data class VisitorPlaceModel(
 data class VisitorModel(
     val name: String,
     val temperature: Float,
-    val checkInTime: String
+    val checkInTime: String,
+    val pbType: PbConImageType = PbConImageType.getRandomPbCon()
 )

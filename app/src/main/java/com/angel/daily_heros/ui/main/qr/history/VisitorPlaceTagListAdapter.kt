@@ -36,14 +36,14 @@ internal object VisitorPlaceModelDiff : DiffUtil.ItemCallback<VisitorPlaceModel>
         oldItem: VisitorPlaceModel,
         newItem: VisitorPlaceModel
     ): Boolean {
-        return oldItem == newItem
+        return oldItem.place == newItem.place
     }
 
     override fun areContentsTheSame(
         oldItem: VisitorPlaceModel,
         newItem: VisitorPlaceModel
     ): Boolean {
-        return oldItem.place == newItem.place
+        return oldItem.checked == newItem.checked
     }
 
 }

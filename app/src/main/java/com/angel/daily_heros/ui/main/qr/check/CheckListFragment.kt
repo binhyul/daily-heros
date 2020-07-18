@@ -38,7 +38,7 @@ class CheckListFragment : DaggerFragment() {
             }
 
         checkListViewModel.submit.observe(viewLifecycleOwner, EventObserver {
-            findNavController().navigate(CheckListFragmentDirections.actionCheckListFragmentToVisitHistoryFragment())
+            findNavController().navigate(CheckListFragmentDirections.actionCheckListFragmentToMainTabsFragment())
         })
 
 

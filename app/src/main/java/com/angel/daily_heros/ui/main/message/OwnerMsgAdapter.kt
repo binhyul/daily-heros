@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.angel.daily_heros.databinding.OwnerMessageItemBinding
 
 
-internal class OwnerMsgAdapter :
+internal class OwnerMsgAdapter(private val listener: MessageActionListener) :
     ListAdapter<OwnerMessageModel, OwnerMessageModelViewHolder>(
         OwnerMessageModelDiff
     ) {
@@ -17,12 +17,13 @@ internal class OwnerMsgAdapter :
         viewType: Int
     ): OwnerMessageModelViewHolder {
         return OwnerMessageModelViewHolder(
-            OwnerMessageItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            OwnerMessageItemBinding.inflate(LayoutInflater.from(parent.context), parent, false),
+            listener
         )
     }
 
     override fun onBindViewHolder(holder: OwnerMessageModelViewHolder, position: Int) {
-        holder.bind(getItem(position))
+        holder.bind(getItem(position), position)
     }
 }
 
@@ -45,14 +46,23 @@ internal object OwnerMessageModelDiff : DiffUtil.ItemCallback<OwnerMessageModel>
 
 
 internal class OwnerMessageModelViewHolder(
-    val binding: OwnerMessageItemBinding
+    val binding: OwnerMessageItemBinding,
+    val listener: MessageActionListener
 ) : RecyclerView.ViewHolder(binding.root) {
     fun bind(
-        data: OwnerMessageModel
+        data: OwnerMessageModel,
+        index: Int
     ) {
         binding.apply {
             binding.model = data
+            binding.actionListener = listener
+            binding.position = index
         }
 
     }
 }
+
+interface MessageActionListener {
+    fun onClickMessage(position: Int)
+}
+

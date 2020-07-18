@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.angel.daily_heros.databinding.HistoryItemBinding
 
 
-internal class HistoryAdapter :
+internal class HistoryAdapter(private val listener: HistoryActionListener) :
     ListAdapter<HistoryModel, HistoryModelViewHolder>(
         HistoryModelDiff
     ) {
@@ -17,12 +17,12 @@ internal class HistoryAdapter :
         viewType: Int
     ): HistoryModelViewHolder {
         return HistoryModelViewHolder(
-            HistoryItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            HistoryItemBinding.inflate(LayoutInflater.from(parent.context), parent, false), listener
         )
     }
 
     override fun onBindViewHolder(holder: HistoryModelViewHolder, position: Int) {
-        holder.bind(getItem(position))
+        holder.bind(getItem(position), position)
     }
 }
 
@@ -45,15 +45,23 @@ internal object HistoryModelDiff : DiffUtil.ItemCallback<HistoryModel>() {
 
 
 internal class HistoryModelViewHolder(
-    val binding: HistoryItemBinding
+    val binding: HistoryItemBinding,
+    val listener: HistoryActionListener
 ) : RecyclerView.ViewHolder(binding.root) {
     fun bind(
-        data: HistoryModel
+        data: HistoryModel,
+        index: Int
     ) {
         binding.apply {
             binding.model = data
+            binding.actionListener = listener
+            position = index
         }
 
     }
+}
+
+interface HistoryActionListener {
+    fun onClickHistory(position: Int)
 }
 

@@ -1,13 +1,17 @@
 package com.angel.daily_heros.ui.main
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.angel.daily_heros.R
+import com.angel.daily_heros.ui.main.history.HistoryViewModel
+import com.angel.daily_heros.ui.main.message.MessageViewModel
+import com.angel.daily_heros.util.Event
 import javax.inject.Inject
 
 class MainTabsViewModel @Inject constructor(
-) : ViewModel(), MainTabsActionListener {
+) : ViewModel(), MainTabsActionListener, TopIconButtonListener {
 
 
     private val _tabsModel = MutableLiveData<List<TabModel>>()
@@ -15,6 +19,21 @@ class MainTabsViewModel @Inject constructor(
 
     private val _selectTabIndex = MutableLiveData<Int>(0)
     val selectTabIndex: LiveData<Int> = _selectTabIndex
+
+    private val _moveQRScanner: MutableLiveData<Event<Unit>> = MutableLiveData()
+    val moveQRScanner: LiveData<Event<Unit>> = _moveQRScanner
+
+    private val _showBack: MutableLiveData<Boolean> = MutableLiveData(false)
+    override val showBack: LiveData<Boolean> = _showBack
+
+    fun showBack() {
+        _showBack.value = true
+    }
+
+    fun hideBack() {
+        _showBack.value = false
+    }
+
 
     override fun onClickTab(to: Int) {
         _selectTabIndex.value.let {
@@ -38,30 +57,36 @@ class MainTabsViewModel @Inject constructor(
         _tabsModel.value = listOf(
             TabModel(
                 true,
-                TabContentFragment.QRSCANNER,
-                R.id.fl_main_act_qr
+                TabContentFragment.HISTORY_OWNER,
+                R.id.fl_main_act_owner_history
             ),
-
             TabModel(
                 false,
-                TabContentFragment.HISTORY,
-                R.id.fl_main_act_history
+                TabContentFragment.MY_HISTORY,
+                R.id.fl_main_act_my_history
             ),
             TabModel(
                 false,
                 TabContentFragment.NOTICE,
                 R.id.fl_main_act_notice
-            ),
-            TabModel(
-                false,
-                TabContentFragment.NOTICE,
-                R.id.fl_main_act_mypage
             )
         )
     }
 
-    companion object {
+    override fun onClickQR() {
+        _moveQRScanner.value = Event(Unit)
+    }
 
+    override fun onClickPerson() {
+    }
+
+    override fun onClickBackButton() {
+        val selectedTab = _tabsModel.value?.find { it.selected }
+        _showBack.value = false
+        when (selectedTab?.fragment) {
+            TabContentFragment.MY_HISTORY -> HistoryViewModel._back.value = Event(Unit)
+            TabContentFragment.NOTICE -> MessageViewModel._back.value = Event(Unit)
+        }
     }
 
 }
@@ -78,5 +103,14 @@ data class TabModel(
 
 
 enum class TabContentFragment {
-    QRSCANNER, HISTORY, NOTICE, MYPAGE
+    HISTORY_OWNER, MY_HISTORY, NOTICE
 }
+
+
+interface TopIconButtonListener {
+    val showBack: LiveData<Boolean>
+    fun onClickBackButton()
+    fun onClickQR()
+    fun onClickPerson()
+}
+

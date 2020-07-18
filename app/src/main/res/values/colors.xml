@@ -6,6 +6,9 @@
 
     <color name="main_background">#ececec</color>
 
+    <color name="normal">#de000000</color>
+    <color name="hot">#e02020</color>
+
 
     <color name="text_main_light_ed">#EDEDED</color>
     <color name="text_body_light_d5">#D5D5D5</color>

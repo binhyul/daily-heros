@@ -3,9 +3,11 @@ package com.angel.daily_heros.ui.main.history
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.angel.daily_heros.ui.main.MainTabsViewModel
+import com.angel.daily_heros.util.Event
 import javax.inject.Inject
 
-class HistoryViewModel @Inject constructor() : ViewModel() {
+class HistoryViewModel @Inject constructor() : ViewModel(), HistoryActionListener {
 
     private val _userName: MutableLiveData<String> = MutableLiveData("아무개")
     val userName: LiveData<String> = _userName
@@ -68,6 +70,35 @@ class HistoryViewModel @Inject constructor() : ViewModel() {
     )
     val historyModels: LiveData<List<HistoryModel>> = _historyModels
 
+    private val _mode: MutableLiveData<HistoryPageMode> = MutableLiveData(HistoryPageMode.LIST)
+    val mode: LiveData<HistoryPageMode> = _mode
+
+
+    private val _whiteBoardItem: MutableLiveData<HistoryModel> = MutableLiveData(
+        HistoryModel(
+            "",
+            "",
+            "",
+            ""
+        )
+    )
+    val whiteBoardItem: LiveData<HistoryModel> = _whiteBoardItem
+
+
+    override fun onClickHistory(position: Int) {
+        _whiteBoardItem.value = historyModels.value?.get(position)
+        _mode.value = HistoryPageMode.WHITE_BOARD
+    }
+
+    fun modeBack() {
+        _mode.value = HistoryPageMode.LIST
+    }
+
+
+    companion object {
+        val _back: MutableLiveData<Event<Unit>> = MutableLiveData()
+        val back: LiveData<Event<Unit>> = _back
+    }
 
 }
 
@@ -78,3 +109,7 @@ data class HistoryModel(
     val place: String,
     val visitTime: String
 )
+
+enum class HistoryPageMode {
+    LIST, WHITE_BOARD
+}
