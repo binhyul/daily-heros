@@ -3,7 +3,9 @@ package com.angel.daily_heros.di
 
 import com.angel.daily_heros.MainActivity
 import com.angel.daily_heros.MainActivityModule
-import com.angel.daily_heros.ui.main.camera.QRScanModule
+import com.angel.daily_heros.ui.main.MainTabModule
+import com.angel.daily_heros.ui.main.history.HistoryModule
+import com.angel.daily_heros.ui.main.message.MessageModule
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -26,7 +28,9 @@ abstract class ActivityBindingModule {
         modules = [
             // activity
             MainActivityModule::class,
-            QRScanModule::class
+            MainTabModule::class,
+            HistoryModule::class,
+            MessageModule::class
 
 
         ]

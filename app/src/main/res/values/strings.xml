@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">daily-heros</string>
+
+    <string name="qr_guide">QR 코드를 인식해주세요.</string>
+    <string name="message_page_guide">사장님의 메세지 수신함</string>
+
 </resources>
