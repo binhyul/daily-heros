@@ -8,6 +8,7 @@
     <dimen name="text_size_accent_56sp">56sp</dimen>
     <dimen name="text_size_accent_44sp">44sp</dimen>
     <dimen name="text_size_h1_28sp">28sp</dimen>
+    <dimen name="text_size_h2_23sp">23sp</dimen>
     <dimen name="text_size_h2_20sp">20sp</dimen>
     <dimen name="text_size_title_18sp">18sp</dimen>
     <dimen name="text_size_title_19sp">19sp</dimen>

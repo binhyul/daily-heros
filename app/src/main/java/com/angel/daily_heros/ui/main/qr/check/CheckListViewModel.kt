@@ -31,6 +31,14 @@ class CheckListViewModel @Inject constructor() : ViewModel(), CheckListActionLis
     private val _submit: MutableLiveData<Event<Unit>> = MutableLiveData()
     val submit: LiveData<Event<Unit>> = _submit
 
+    private val _doc: MutableLiveData<Float> = MutableLiveData(36.5f)
+    val doc: LiveData<Float> = _doc
+
+
+    fun setDoc(t: Float) {
+        _doc.value = t
+
+    }
 
     override fun onCheckYes(type: CheckType) {
         when (type) {
