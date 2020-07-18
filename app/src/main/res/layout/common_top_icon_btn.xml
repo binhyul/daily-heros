@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="23dp"
             android:onClick="@{() -> topIconActionListenr.onClickBackButton()}"
-            android:src="@android:drawable/presence_audio_away"
+            android:src="@drawable/btn_nav"
             android:visibility="@{topIconActionListenr.showBack ?  View.VISIBLE : View.GONE}"
             app:layout_constraintBottom_toBottomOf="@id/btn_person"
             app:layout_constraintStart_toStartOf="parent" />

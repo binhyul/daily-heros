@@ -6,6 +6,8 @@
     <string name="white_board">화이트보드</string>
     <string name="history_page_hint">글을 남겨주세요.</string>
 
+    <string name="press_two_shutdown">\'뒤로 버튼\'을 한번 더 누르시면 종료됩니다.</string>
+
     <string name="message_page_guide">점주님의 메시지 수신함</string>
 
     <string name="doc">%1$s°</string>

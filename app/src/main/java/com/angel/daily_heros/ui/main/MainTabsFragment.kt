@@ -5,11 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
+import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.angel.daily_heros.R
 import com.angel.daily_heros.databinding.MainFragBinding
 import com.angel.daily_heros.ui.main.history.HistoryFragment
 import com.angel.daily_heros.ui.main.message.MessageFragment
@@ -17,6 +20,8 @@ import com.angel.daily_heros.ui.main.qr.history.VisitHistoryFragment
 import com.angel.daily_heros.util.EventObserver
 import com.angel.daily_heros.util.activityViewModelProvider
 import dagger.android.support.DaggerFragment
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class MainTabsFragment : DaggerFragment() {
@@ -110,12 +115,8 @@ class MainTabsFragment : DaggerFragment() {
 
     override fun onResume() {
         super.onResume()
-        val callback = object : OnBackPressedCallback(true) {
-            override fun handleOnBackPressed() {
-                requireActivity().finish()
-            }
-        }
-        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
+        setUpBackButton()
+
     }
 
     private fun createContentFragment(position: Int): Fragment {
@@ -129,11 +130,30 @@ class MainTabsFragment : DaggerFragment() {
             TabContentFragment.NOTICE -> MessageFragment().apply {
                 mainViewModel = mainModel
             }
-            else -> HistoryFragment().apply {
-                mainViewModel = mainModel
-            }
-
         }
+    }
+
+    private var backPressCnt = 0
+    private fun setUpBackButton() {
+        val callback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                if (mainModel.selectTabIndex.value == 0) {
+                    if (backPressCnt < 1) {
+                        backPressCnt++
+                        Toast.makeText(
+                            requireContext(), getString(R.string.press_two_shutdown),
+                            Toast.LENGTH_SHORT
+                        ).show()
+                        lifecycleScope.launch { delay(3000);backPressCnt = 0 }
+                    } else {
+                        requireActivity().finish()
+                    }
+                } else {
+                    mainModel.onClickTab(0)
+                }
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
     }
 
 }
