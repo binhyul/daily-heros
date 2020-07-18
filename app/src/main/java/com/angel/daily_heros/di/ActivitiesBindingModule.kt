@@ -6,6 +6,8 @@ import com.angel.daily_heros.MainActivityModule
 import com.angel.daily_heros.ui.main.MainTabModule
 import com.angel.daily_heros.ui.main.history.HistoryModule
 import com.angel.daily_heros.ui.main.message.MessageModule
+import com.angel.daily_heros.ui.main.qr.check.CheckListModule
+import com.angel.daily_heros.ui.main.qr.history.VisitHistoryModule
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -30,7 +32,9 @@ abstract class ActivityBindingModule {
             MainActivityModule::class,
             MainTabModule::class,
             HistoryModule::class,
-            MessageModule::class
+            MessageModule::class,
+            CheckListModule::class,
+            VisitHistoryModule::class
 
 
         ]

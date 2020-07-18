@@ -7,6 +7,9 @@ import javax.inject.Inject
 
 class HistoryViewModel @Inject constructor() : ViewModel() {
 
+    private val _userName: MutableLiveData<String> = MutableLiveData("아무개")
+    val userName: LiveData<String> = _userName
+
     private val _historyModels: MutableLiveData<List<HistoryModel>> = MutableLiveData(
         listOf(
             HistoryModel(

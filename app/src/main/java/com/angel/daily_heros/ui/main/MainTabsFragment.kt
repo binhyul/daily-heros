@@ -11,6 +11,7 @@ import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.angel.daily_heros.R
 import com.angel.daily_heros.databinding.MainFragBinding
 import com.angel.daily_heros.ui.main.history.HistoryFragment
@@ -86,6 +87,8 @@ class MainTabsFragment : DaggerFragment() {
             Log.d("barcodeFormat", rawResult.contents)
 
             binding.scannerView.stopCamera()
+
+            findNavController().navigate(MainTabsFragmentDirections.actionMainTabsFragmentToCheckListFragment())
 
 //            viewModel.onRecognized(rawResult.contents)
 

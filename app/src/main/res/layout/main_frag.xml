@@ -14,9 +14,9 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/main_background">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -39,7 +39,6 @@
                 android:paddingVertical="6dp"
                 android:text="@string/qr_guide"
                 android:textColor="@android:color/black"
-                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +53,7 @@
             android:id="@+id/fl_main_act_qr"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="60dp"
+            android:layout_marginBottom="64dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -62,7 +61,7 @@
             android:id="@+id/fl_main_act_history"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="60dp"
+            android:layout_marginBottom="64dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -70,7 +69,7 @@
             android:id="@+id/fl_main_act_notice"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="60dp"
+            android:layout_marginBottom="64dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -78,59 +77,62 @@
             android:id="@+id/fl_main_act_mypage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="60dp"
+            android:layout_marginBottom="64dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="#eceef4"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:layout_height="1dp"
+            android:alpha="0.12"
+            android:background="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/ll_bottom_btn" />
 
         <LinearLayout
             android:id="@+id/ll_bottom_btn"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="#c4c4c4"
+            android:layout_height="64dp"
+            android:background="@android:color/white"
             android:orientation="horizontal"
-            android:paddingHorizontal="36dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
 
-            <Button
-                android:layout_width="42dp"
-                android:layout_height="42dp"
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:onClick="@{() -> actionListener.onClickTab(0)}"
-                android:text="QR" />
+                android:scaleType="centerCrop"
+                android:src="@{viewModel.selectTabIndex ==0 ? @drawable/qr_active : @drawable/qr_inactive}" />
 
-            <Button
-                android:layout_width="42dp"
-                android:layout_height="42dp"
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:onClick="@{() -> actionListener.onClickTab(1)}"
-                android:text="방문기록" />
+                android:scaleType="centerCrop"
+                android:src="@{viewModel.selectTabIndex ==1 ? @drawable/nav_active : @drawable/nav_inactive}" />
 
-            <Button
-                android:layout_width="42dp"
-                android:layout_height="42dp"
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:onClick="@{() -> actionListener.onClickTab(2)}"
-                android:text="메세지 수신함" />
+                android:scaleType="centerCrop"
+                android:src="@{viewModel.selectTabIndex ==2 ? @drawable/chat_active : @drawable/chat_inactive}" />
 
-            <Button
-                android:layout_width="42dp"
-                android:layout_height="42dp"
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:onClick="@{() -> actionListener.onClickTab(3)}"
-                android:text="내정보" />
+                android:scaleType="centerCrop"
+                android:src="@{viewModel.selectTabIndex ==3 ? @drawable/mypage_active : @drawable/mypage_inactive}" />
 
         </LinearLayout>
 

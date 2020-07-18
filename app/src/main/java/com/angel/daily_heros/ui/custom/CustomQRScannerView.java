@@ -45,7 +45,7 @@ public abstract class CustomQRScannerView extends FrameLayout implements Camera.
     private int mCornerRadius = 0;
     private boolean mSquaredFinder = false;
     private float mBorderAlpha = 1.0f;
-    private int mViewFinderOffset = 20;
+    private int mViewFinderOffset = 50;
     private float mAspectTolerance = 0.1f;
 
     public CustomQRScannerView(Context context) {

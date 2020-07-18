@@ -1,5 +1,7 @@
 package com.angel.daily_heros.ui.main.history
 
+import android.graphics.drawable.ShapeDrawable
+import android.graphics.drawable.shapes.OvalShape
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -60,4 +62,11 @@ fun setHistoryItems(view: RecyclerView, items: List<HistoryModel>?) {
 @BindingAdapter("android:glide_src")
 fun setImage(view: ImageView, url: String) {
     Glide.with(view).load(url).into(view)
+}
+
+@BindingAdapter("android:glide_profile_src")
+fun setProfileImage(view: ImageView, url: String) {
+    view.background = ShapeDrawable(OvalShape())
+    view.clipToOutline = true
+    Glide.with(view).load("https://dummyimage.com/qvga").into(view)
 }

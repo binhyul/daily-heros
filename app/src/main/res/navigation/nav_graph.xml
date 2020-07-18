@@ -14,5 +14,21 @@
     <fragment
         android:id="@+id/mainTabsFragment"
         android:name="com.angel.daily_heros.ui.main.MainTabsFragment"
-        android:label="MainTabsFragment" />
+        android:label="MainTabsFragment" >
+        <action
+            android:id="@+id/action_mainTabsFragment_to_checkListFragment"
+            app:destination="@id/checkListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkListFragment"
+        android:name="com.angel.daily_heros.ui.main.qr.check.CheckListFragment"
+        android:label="CheckListFragment" >
+        <action
+            android:id="@+id/action_checkListFragment_to_visitHistoryFragment"
+            app:destination="@id/visitHistoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/visitHistoryFragment"
+        android:name="com.angel.daily_heros.ui.main.qr.history.VisitHistoryFragment"
+        android:label="VisitHistoryFragment" />
 </navigation>
