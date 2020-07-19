@@ -92,5 +92,5 @@ fun setProfileImage(view: ImageView, url: String) {
     if (url.isBlank()) return
     view.background = ShapeDrawable(OvalShape())
     view.clipToOutline = true
-    Glide.with(view).load("https://dummyimage.com/qvga").into(view)
+    Glide.with(view).load(url).into(view)
 }

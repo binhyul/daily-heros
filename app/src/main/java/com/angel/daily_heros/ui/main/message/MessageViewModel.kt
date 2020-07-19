@@ -15,24 +15,24 @@ class MessageViewModel @Inject constructor() : ViewModel(), MessageActionListene
         listOf(
             OwnerMessageModel(
                 "조한진",
-                "None",
+                "https://cdn.pixabay.com/photo/2020/07/10/08/16/sunflower-5389943_960_720.jpg",
                 "김밥천국평양점",
                 "고단한 하루지만 고객님의 즐거움이 되기 위해 저희는 오늘도 정성껏 만들고 있습니다~ 코로나 방지를 위해 방역도 완료 되었습니다."
             ),
             OwnerMessageModel(
                 "장도윤",
-                "None",
+                "https://cdn.pixabay.com/photo/2020/07/15/11/10/landscape-5407341_960_720.jpg",
                 "김밥천국부산점",
                 "고단한 하루지만 고객님의 즐거움이 되기 위해 저희는 오늘도 정성껏 만들고 있습니다~ 코로나 방지를 위해 방역도 완료 되었습니다."
             ),
             OwnerMessageModel(
                 "추지효",
-                "None",
+                "https://cdn.pixabay.com/photo/2020/07/11/19/51/snail-5395186_960_720.jpg",
                 "김밥천국어딘가",
                 "고단한 하루지만 고객님의 즐거움이 되기 위해 저희는 오늘도 정성껏 만들고 있습니다~ 코로나 방지를 위해 방역도 완료 되었습니다."
             ),
             OwnerMessageModel(
-                "이가연", "None",
+                "이가연", "https://cdn.pixabay.com/photo/2020/07/08/05/31/gray-cat-5382617_960_720.jpg",
                 "김밥천국안산점",
                 "고단한 하루지만 고객님의 즐거움이 되기 위해 저희는 오늘도 정성껏 만들고 있습니다~ 코로나 방지를 위해 방역도 완료 되었습니다."
             ), OwnerMessageModel(
@@ -41,21 +41,21 @@ class MessageViewModel @Inject constructor() : ViewModel(), MessageActionListene
                 "고단한 하루지만 고객님의 즐거움이 되기 위해 저희는 오늘도 정성껏 만들고 있습니다~ 코로나 방지를 위해 방역도 완료 되었습니다."
             )
             , OwnerMessageModel(
-                "김아무개", "None",
+                "김아무개","https://cdn.pixabay.com/photo/2020/07/15/09/37/smilies-5407113_960_720.jpg",
                 "버거킹",
                 "고단한 하루지만 고객님의 즐거움이 되기 위해 저희는 오늘도 정성껏 만들고 있습니다~ 코로나 방지를 위해 방역도 완료 되었습니다."
             ),
             OwnerMessageModel(
-                "홍길동", "None",
+                "홍길동",  "https://cdn.pixabay.com/photo/2020/07/15/11/22/raspberry-5407356_960_720.jpg",
                 "크로스핏",
                 "고단한 하루지만 고객님의 즐거움이 되기 위해 저희는 오늘도 정성껏 만들고 있습니다~ 코로나 방지를 위해 방역도 완료 되었습니다."
             ),
             OwnerMessageModel(
-                "이우진", "None",
+                "이우진",  "https://cdn.pixabay.com/photo/2020/05/22/07/46/model-5204225_960_720.jpg",
                 "우리집",
                 "고단한 하루지만 고객님의 즐거움이 되기 위해 저희는 오늘도 정성껏 만들고 있습니다~ 코로나 방지를 위해 방역도 완료 되었습니다."
             ), OwnerMessageModel(
-                "현우진", "None",
+                "현우진", "https://cdn.pixabay.com/photo/2020/05/15/11/49/pet-5173354_960_720.jpg",
                 "천안농협",
                 "고단한 하루지만 고객님의 즐거움이 되기 위해 저희는 오늘도 정성껏 만들고 있습니다~ 코로나 방지를 위해 방역도 완료 되었습니다."
             )

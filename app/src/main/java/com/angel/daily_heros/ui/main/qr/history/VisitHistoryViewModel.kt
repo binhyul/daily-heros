@@ -15,16 +15,16 @@ class VisitHistoryViewModel @Inject constructor() : ViewModel(), VisitorPageActi
                 true,
                 listOf(
                     VisitorModel(
-                        "AAA",
+                        "안국현",
                         36.5f,
                         "5분전"
                     ),
                     VisitorModel(
-                        "BVB",
+                        "김기명",
                         38.5f,
                         "5분전"
                     ), VisitorModel(
-                        "BBB",
+                        "김노을",
                         36.5f,
                         "5분전"
                     )
@@ -35,29 +35,29 @@ class VisitHistoryViewModel @Inject constructor() : ViewModel(), VisitorPageActi
                 false,
                 listOf(
                     VisitorModel(
-                        "FFF",
+                        "서상원",
                         36.5f,
                         "5분전"
                     ),
                     VisitorModel(
-                        "GFS",
+                        "김응진",
                         36.5f,
                         "5분전"
                     ), VisitorModel(
-                        "QQQ",
+                        "조현욱",
                         38.0f,
                         "5분전"
                     ), VisitorModel(
-                        "DDD",
+                        "유재주",
                         36.5f,
                         "5분전"
                     ),
                     VisitorModel(
-                        "EFDS",
+                        "주창환",
                         36.5f,
                         "20분 전"
                     ), VisitorModel(
-                        "FFFF",
+                        "김지아",
                         36.5f,
                         "1시간 전"
                     )
@@ -68,16 +68,16 @@ class VisitHistoryViewModel @Inject constructor() : ViewModel(), VisitorPageActi
                 false,
                 listOf(
                     VisitorModel(
-                        "DDD",
+                        "김라헬",
                         36.5f,
                         "5분전"
                     ),
                     VisitorModel(
-                        "EFDS",
+                        "이화랑",
                         37.9f,
                         "20분 전"
                     ), VisitorModel(
-                        "FFFF",
+                        "김병우",
                         36.5f,
                         "1시간 전"
                     )

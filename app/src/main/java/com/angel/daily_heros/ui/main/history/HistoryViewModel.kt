@@ -15,56 +15,56 @@ class HistoryViewModel @Inject constructor() : ViewModel(), HistoryActionListene
     private val _historyModels: MutableLiveData<List<HistoryModel>> = MutableLiveData(
         listOf(
             HistoryModel(
-                "None",
+                "https://cdn.pixabay.com/photo/2019/05/04/15/24/art-4178302_960_720.jpg",
                 "조한진",
                 "김밥천국평양점",
-                "0일전 방문"
+                "1일전 방문"
             ),
             HistoryModel(
-                "None",
+                "https://cdn.pixabay.com/photo/2020/05/15/11/49/pet-5173354_960_720.jpg",
                 "장도윤",
                 "김밥천국부산점",
-                "0일전 방문"
+                "3일전 방문"
             ),
             HistoryModel(
-                "None",
+                "https://cdn.pixabay.com/photo/2020/05/22/07/46/model-5204225_960_720.jpg",
                 "추지효",
                 "김밥천국어딘가",
-                "0일전 방문"
+                "4일전 방문"
             ),
             HistoryModel(
-                "None",
+                "https://cdn.pixabay.com/photo/2020/07/15/11/22/raspberry-5407356_960_720.jpg",
                 "이가연",
                 "김밥천국안산점",
-                "0일전 방문"
+                "9일전 방문"
             ), HistoryModel(
-                "None",
+                "https://cdn.pixabay.com/photo/2020/07/15/09/37/smilies-5407113_960_720.jpg",
                 "권경민",
                 "김밥천국스프링점",
-                "0일전 방문"
+                "11일전 방문"
             )
             , HistoryModel(
-                "None",
+                "https://cdn.pixabay.com/photo/2020/07/08/05/31/gray-cat-5382617_960_720.jpg",
                 "김아무개",
                 "버거킹",
-                "0일전 방문"
+                "22일전 방문"
             ),
             HistoryModel(
-                "None",
+                "https://cdn.pixabay.com/photo/2020/07/11/19/51/snail-5395186_960_720.jpg",
                 "홍길동",
                 "크로스핏",
-                "0일전 방문"
+                "40일전 방문"
             ),
             HistoryModel(
-                "None",
+                "https://cdn.pixabay.com/photo/2020/07/15/11/10/landscape-5407341_960_720.jpg",
                 "이우진",
                 "우리집",
-                "0일전 방문"
+                "51일전 방문"
             ), HistoryModel(
-                "None",
+                "https://cdn.pixabay.com/photo/2020/07/10/08/16/sunflower-5389943_960_720.jpg",
                 "현우진",
                 "천안농협",
-                "0일전 방문"
+                "70일전 방문"
             )
         )
     )
