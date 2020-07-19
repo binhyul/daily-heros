@@ -53,9 +53,9 @@ class QRScannerFragment : DaggerFragment() {
         binding.scannerView.setLaserEnabled(false)
         binding.scannerView.setSquareViewFinder(true)
         binding.scannerView.setBorderAlpha(1f)
-        binding.scannerView.setMaskColor(0x00000000)
+        binding.scannerView.setMaskColor(Color.parseColor("#66080808"))
         binding.scannerView.setBorderStrokeWidth(resources.getDimensionPixelOffset(R.dimen.qr_border_width))
-        binding.scannerView.setBorderColor(Color.parseColor("#727272"))
+        binding.scannerView.setBorderColor(Color.parseColor("#ffffff"))
         binding.scannerView.setFormats(List<BarcodeFormat>(1) { BarcodeFormat.QRCODE })
         binding.scannerView.startCamera()
 
