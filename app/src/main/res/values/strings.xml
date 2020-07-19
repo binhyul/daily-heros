@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">daily-heros</string>
+    <string name="app_name">체크인메니저</string>
+    <string name="app_content">매장 방문고객 대상\n비대면 신뢰 구축 솔루션</string>
+
 
     <string name="qr_guide">카메라로 QR코드 스캔</string>
     <string name="history_page_guide">%1$s님께 서비스해주신\n점주님 리스트입니다.</string>

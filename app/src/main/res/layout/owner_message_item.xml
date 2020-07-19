@@ -65,7 +65,7 @@
                 style="@style/TextNotoReg14"
                 android:layout_width="0dp"
                 android:layout_gravity="end"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="8dp"
                 android:ellipsize="end"
                 android:lineSpacingExtra="0.25sp"
                 android:maxLines="2"

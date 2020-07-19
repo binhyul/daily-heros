@@ -210,7 +210,16 @@
         <item name="android:lineSpacingExtra">@dimen/text_size_small_text_11sp</item>
         <item name="android:fontFamily">@font/noto_sans_cjk_kr_regular</item>
     </style>
-    j
+
+    <style name="TextNotoBold15">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_body1_15sp</item>
+        <item name="android:textColor">@color/text_default_reg_bg_ff</item>
+        <item name="android:lineSpacingExtra">@dimen/text_size_body1_14sp</item>
+        <item name="android:fontFamily">@font/noto_sans_cjk_kr_bold</item>
+    </style>
+
 
     <style name="TextNotoBold14">
         <item name="android:layout_width">wrap_content</item>

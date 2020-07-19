@@ -73,7 +73,7 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:onClick="@{() -> actionListener.onClickTab(0)}"
@@ -82,7 +82,7 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:onClick="@{() -> actionListener.onClickTab(1)}"
@@ -91,7 +91,7 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:onClick="@{() -> actionListener.onClickTab(2)}"

@@ -14,6 +14,7 @@
     <dimen name="text_size_title_19sp">19sp</dimen>
     <dimen name="text_size_ab_title_16sp">16sp</dimen>
     <dimen name="text_size_ab_title_18sp">18sp</dimen>
+    <dimen name="text_size_body1_15sp">15sp</dimen>
     <dimen name="text_size_body1_14sp">14sp</dimen>
     <dimen name="text_size_body2_12sp">12sp</dimen>
     <dimen name="text_size_small_text_11sp">11sp</dimen>
