@@ -2,6 +2,9 @@
 
 <h1>체크인 매니저</h1>
 
+<h3>코로나 시대 - 전자명부</h3> 
+
+
 <h2>메인화면 - 같은 장소 방문자 리스트</h2>
 
 <img src="https://user-images.githubusercontent.com/33985795/87873605-f0146a00-c9fd-11ea-9633-5bc0b62ae161.jpg" width="35%"></img>
