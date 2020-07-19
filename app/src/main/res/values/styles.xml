@@ -128,6 +128,15 @@
     </style>
 
 
+    <style name="TextNotoMedium20">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_h2_20sp</item>
+        <item name="android:textColor">@color/text_main_22</item>
+        <item name="android:lineSpacingExtra">@dimen/text_line_spacing_title_0sp</item>
+        <item name="android:fontFamily">@font/noto_sans_cjk_kr_medium</item>
+    </style>
+
     <style name="TextNotoReg20">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>

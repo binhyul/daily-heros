@@ -54,13 +54,6 @@
             app:layout_constraintTop_toBottomOf="@+id/btn_bar" />
 
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:alpha="0.12"
-            android:background="@android:color/black"
-            app:layout_constraintBottom_toTopOf="@+id/ll_bottom_btn" />
-
         <LinearLayout
             android:id="@+id/ll_bottom_btn"
             android:layout_width="match_parent"
@@ -99,6 +92,19 @@
                 android:src="@{viewModel.selectTabIndex ==2 ? @drawable/chat_active : @drawable/chat_inactive}" />
 
         </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/white"
+            app:layout_constraintTop_toTopOf="@+id/ll_bottom_btn" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:alpha="0.12"
+            android:background="@android:color/black"
+            app:layout_constraintTop_toTopOf="@+id/ll_bottom_btn" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
