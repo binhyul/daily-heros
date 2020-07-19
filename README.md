@@ -4,7 +4,7 @@
 
 메인화면 - 같은 장소 방문자 리스트
 
-![Screenshot_20200719-201012](https://user-images.githubusercontent.com/33985795/87873514-1b4a8980-c9fd-11ea-9832-ca1772eebd39.jpg)
+![Screenshot_20200719-201012](https://user-images.githubusercontent.com/33985795/87873605-f0146a00-c9fd-11ea-9633-5bc0b62ae161.jpg)
 
 나와 같은 장소를 방문한 사람들을 보여줍니다
 상단의 장소 태그에 따라 해당하는 방문자들만 모아 볼 수 있습니다
