@@ -113,7 +113,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="start"
-                            android:layout_marginTop="2dp"
+                            android:layout_marginTop="6dp"
                             android:text="@{viewModel.whiteBoardItem.name}"
                             android:textColor="#99000000"
                             app:lineHeight="20dp" />
@@ -141,7 +141,7 @@
                         <TextView
                             style="@style/TextNotoReg14"
                             android:layout_gravity="end"
-                            android:layout_marginTop="2dp"
+                            android:layout_marginTop="6dp"
                             android:text="@{viewModel.whiteBoardItem.visitTime}"
                             android:textColor="#99000000"
                             app:lineHeight="20dp"
